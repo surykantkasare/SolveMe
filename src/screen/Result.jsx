@@ -1,14 +1,37 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React, { useCallback, useContext } from "react";
+import AppContext from "../../AppContext";
+import { useFocusEffect } from "@react-navigation/native";
+const Result = ({ navigation }) => {
+  const { result, setUrl, setCategory, setDiffficulty, steResult } =
+    useContext(AppContext);
+  useFocusEffect(
+    useCallback(() => {
+      const onBackPress = () => {
+        navigation.navigate("Categories"); // Back Categories
+        steResult({
+          correct: 0,
+          incorrect: 0,
+          skipped: 0,
+        });
+        setUrl("");
+        setCategory(null);
+        setDiffficulty(null);
+        return true; // disable normal behavior
+      };
+      BackHandler.addEventListner("hardwaeBackPres", onBackPress); // detect back button press
+      return () => BackHandler.removeEventListener("hardwareBackPress");
+    }, [])
+  );
 
-const Result = () => {
   return (
-    <View>
-      <Text>Result</Text>
-    </View>
-  )
-}
+    <SAfeAreaView style={styles.container}>
 
-export default Result
+      
+    </SAfeAreaView>
+  );
+};
 
-const styles = StyleSheet.create({})
+export default Result;
+
+const styles = StyleSheet.create({});
