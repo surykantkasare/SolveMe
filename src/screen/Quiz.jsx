@@ -152,7 +152,7 @@ export default Quiz = ({ navigation }) => {
   };
   const QuestionComponent = () => {
     return (
-      <View style={styles.questionContainer}>
+      <View style={[styles.questionContainer,{padding:5}]}>
         <Text style={styles.questionText}>
           Q.{decodeURIComponent(questions[currQues].question)}
         </Text>
@@ -272,8 +272,8 @@ const colors = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.blue,
     justifyContent: "center",
+    backgroundColor:'lightyellow',
   },
   loaderContainer: {
     flex: 1,
@@ -313,6 +313,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     borderBottomColor: colors.dark,
+    backgroundColor: colors.blue,
     borderBottomWidth: 1,
     marginBottom: 10,
   },
@@ -321,6 +322,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "Iceland_400Regular",
     marginBottom: 15,
+    position:'relative',
+    top:8,
   },
   questionContainer: {
     width: "90%",
@@ -328,16 +331,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 20,
   },
-
+  
   questionContainer: {
     width: "87%",
     marginVertical: 10,
-
+    
     backgroundColor: "#fff",
     borderRadius: 20,
-    paddingVertical: 24,
     borderWidth: 1,
     borderColor: colors.dark,
+  overflow:'hidden',
+    paddingBottom:20,
   },
   optionBox: {
     paddingTop: 20,
@@ -359,6 +363,8 @@ const styles = StyleSheet.create({
   questionButton: {
     padding: 16,
     borderRadius: 50,
+    borderColor:colors.dark,
+    borderWidth:2,
   },
   QCounter: {
     position: "relative",
@@ -374,7 +380,7 @@ const styles = StyleSheet.create({
   },
   btnConatiner: {
     position:'relative',
-    bottom:30,
+    bottom:40,
     width: "100%",
     alignItems: "center",
   },

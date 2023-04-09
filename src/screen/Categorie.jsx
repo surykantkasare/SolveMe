@@ -46,7 +46,7 @@ const Categorie = ({ navigation }) => {
           <Text style={styles.headerText}>SolveMe</Text>
         </View>
         <View style={styles.headerSubTextContainer}>
-          <Text style={[styles.headerSubText,  {fontSize:category?50:40}]}>
+          <Text style={[styles.headerSubText,  {fontSize:category?50:40},category?{bottom:20}:{}]}>
             {category ? `${category.name}` : `Choose a category to start Quiz`}
           </Text>
         </View>
@@ -55,7 +55,7 @@ const Categorie = ({ navigation }) => {
         style={[
           styles.categoriesContainer,
           {
-            marginTop: category ? -80 : -50,
+            marginTop: category ? -100 : -50,
           },
         ]}
       >
@@ -68,7 +68,7 @@ const Categorie = ({ navigation }) => {
                 styles.category,
                 {
                   backgroundColor:
-                    category?.id === ctg.id ? colors.blue : "#fff",
+                    category?.id === ctg.id ? colors.blue : "lightyellow",
                 },
               ]}
             >
@@ -108,6 +108,7 @@ const styles = StyleSheet.create({
     flex: 1,
     position: "relative",
     alignItems: "center",
+    backgroundColor:'lightyellow',
   },
   header: {
     backgroundColor: "lightblue",
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
   headerTextContainer: {
     paddingtop: 6,
     position:'relative',
-    top:70,
+    top:60,
   },
   headerText: {
     fontFamily: "Nabla_400Regular",
@@ -134,6 +135,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    position:'relative',
   },
   headerSubText: {
     color: colors.dark,
@@ -177,15 +179,15 @@ const styles = StyleSheet.create({
   },
   button: {
     marginBottom: 20,
-    backgroundColor: colors.blue,
+    backgroundColor: colors.yellow,
     width: 220,
     padding: 30,
     borderRadius: 3,
     borderWidth: 1,
     position: "relative",
-    top: 10,
+    top:10,
     borderColor: colors.dark,
-    padding: 3,
+    padding: 5,
     borderRadius: 8,
   },
   buttonText: {

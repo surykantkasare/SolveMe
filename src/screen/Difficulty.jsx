@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, Image } from "react-native";
 import React, { useContext } from "react";
+import { StyleSheet, Text, View, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TouchableOpacity } from "react-native";
 import AppContext from "../../AppContext";
@@ -116,6 +116,7 @@ const Difficulty = ({ navigation }) => {
                 styles.difficultyBtnConatiner,
                 {
                   top: 10,
+
                 },
               ]}
               onPress={() => navigation.navigate("Quiz")}
@@ -149,6 +150,7 @@ const styles = StyleSheet.create({
     flex: 1,
     position: "relative",
     alignItems: "center",
+    backgroundColor:'lightyellow'
   },
   header: {
     backgroundColor: "lightblue",
