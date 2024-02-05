@@ -2,7 +2,11 @@
 
 Hey, everyone! I wanted to share a sneak peek of my latest project, SolveMe - a quiz app that's sure to challenge and entertain you!
 
-<img src="https://media.licdn.com/dms/image/C5605AQEQbSxUqapmXg/videocover-low/0/1681012497779?e=1687975200&v=beta&t=Ge5NOosrog4cZXWL19BxQZCxGaxASH8U4PNE9h0PKrQ"/>
+<img src="https://im7.ezgif.com/tmp/ezgif-7-d5a2def8f4.gif"/>
+    <a href="https://www.linkedin.com/posts/surykant-kasare_solvemequiz-quizenthusiast-quiztime-activity-7050677497637605376-RlN_?utm_source=share&utm_medium=member_desktop">
+      Watch the complete video on LinkedIn
+    </a>
+
 
 ## Features
 
